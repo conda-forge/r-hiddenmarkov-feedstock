@@ -14,14 +14,16 @@ Summary: Contains functions for the analysis of Discrete Time Hidden Markov Mode
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-hiddenmarkov-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-hiddenmarkov-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-hiddenmarkov-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-hiddenmarkov-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-hiddenmarkov-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-hiddenmarkov-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-hiddenmarkov-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-hiddenmarkov-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-hiddenmarkov-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-hiddenmarkov-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-hiddenmarkov-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-hiddenmarkov-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-hiddenmarkov/badges/version.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-hiddenmarkov/badges/downloads.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--hiddenmarkov-green.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-hiddenmarkov.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-hiddenmarkov.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-hiddenmarkov.svg)](https://anaconda.org/conda-forge/r-hiddenmarkov) |
 
 Installing r-hiddenmarkov
 =========================
