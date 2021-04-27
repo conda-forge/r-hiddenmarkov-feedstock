@@ -7,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: HiddenMarkov_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/HiddenMarkov_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/HiddenMarkov/HiddenMarkov_{{ version }}.tar.gz
@@ -22,10 +21,10 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
+    - {{ compiler('fortran') }}        # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -44,11 +43,12 @@ test:
 
 about:
   home: http://www.statsresearch.co.nz/dsh/sslib/
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Contains functions for the analysis of Discrete Time Hidden Markov Models, Markov Modulated GLMs and the Markov Modulated Poisson Process. It includes functions for simulation, parameter estimation, and the Viterbi algorithm. See the topic "HiddenMarkov" for an introduction to the package, and "Change Log" for
     a list of recent changes. The algorithms are based of those of Walter Zucchini.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
