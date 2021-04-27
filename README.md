@@ -3,7 +3,7 @@ About r-hiddenmarkov
 
 Home: http://www.statsresearch.co.nz/dsh/sslib/
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-hiddenmarkov-feedstock/blob/master/LICENSE.txt)
 
