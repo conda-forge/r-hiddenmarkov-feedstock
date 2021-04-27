@@ -1,4 +1,4 @@
-{% set version = '1.8-11' %}
+{% set version = "1.8-13" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,25 +7,24 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: HiddenMarkov_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/HiddenMarkov_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/HiddenMarkov/HiddenMarkov_{{ version }}.tar.gz
-  sha256: 4a1614249eee9f428bc182ea9ced443dff4eafa7babf4259c720e5b4da2d08fa
+  sha256: 7186d23e561818f3e1f01376a4fb2af9ccee775ce5afc1e3175f3b07a81db515
 
 build:
-  merge_build_host: True  # [win]
-  number: 1004
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('fortran') }}  # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
+    - {{ compiler('fortran') }}        # [not win]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -44,14 +43,12 @@ test:
 
 about:
   home: http://www.statsresearch.co.nz/dsh/sslib/
-  license: GPL (>= 2)
-  summary: Contains functions for the analysis of Discrete Time Hidden Markov Models, Markov
-    Modulated GLMs and the Markov Modulated Poisson Process. It includes functions for
-    simulation, parameter estimation, and the Viterbi algorithm. See the topic "HiddenMarkov"
-    for an introduction to the package, and "Change Log" for a list of recent changes.
-    The algorithms are based of those of Walter Zucchini.
+  license: GPL-2.0-or-later
+  summary: Contains functions for the analysis of Discrete Time Hidden Markov Models, Markov Modulated GLMs and the Markov Modulated Poisson Process. It includes functions for simulation, parameter estimation, and the Viterbi algorithm. See the topic "HiddenMarkov" for an introduction to the package, and "Change Log" for
+    a list of recent changes. The algorithms are based of those of Walter Zucchini.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
